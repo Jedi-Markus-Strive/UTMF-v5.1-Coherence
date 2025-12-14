@@ -40,38 +40,53 @@ MCI measures **cross-dataset similarity** of mean multifractal spectra:
 Both indices are derived from the **same MFDFA implementation** and the same \(q\)-grid and scale configuration embedded directly in the JSON archive.
 
 ---
+UTMF-v5.1-Coherence/
+│
+├── README.md
+│   ← Overview of the project, results, and reproducibility
+│
+├── LICENSE
+│   ← MIT License
+│
+├── utmf_v5.1.py
+│   ← Complete UTMF v5.1 pipeline as a single executable script
+│     (exactly as used in the paper; provided as-is)
+│
+├── FULL_DETAILS_utmf_v5.1_*.json
+│   ← Self-contained computational archive:
+│     • embedded MFDFA implementation
+│     • configuration snapshot
+│     • stored time series
+│     • all h(q) spectra
+│     • all metadata required for full reconstruction
+│
+├── results/
+│   ├── README.md
+│   │   ← Explanation of all figures and CSV files used in the paper
+│   │
+│   ├── UTMF_TCI_MCI_combined_nulltest_*.csv
+│   │   ← Primary null-test output (real vs synthetic distributions)
+│   │
+│   ├── UTMF_VALIDATION_metrics_*.csv
+│   │   ← Scalar statistical validation metrics (13-test suite)
+│   │
+│   ├── UTMF_VALIDATION_summary_*.png
+│   │   ← Multi-panel validation figure (paper-grade)
+│   │
+│   └── figures/
+│       ├── fig_tci_hist_*.png
+│       ├── fig_mci_hist_*.png
+│       ├── fig_tci_cdf_*.png
+│       ├── fig_mci_cdf_*.png
+│       ├── fig_real_distance_kde_*.png
+│       ├── fig_real_dendrogram_*.png
+│       ├── fig_real_tci_heatmap_*.png
+│       ├── fig_real_pca_hq_*.png
+│       └── fig_mean_hq_overlay_*.png
+│
+└── DATASET_LINKS.md
+    ← Direct download links and references to all datasets used
 
-## 2. Repository Layout
-
-```text
-UTMF-v5.1/
-│
-├── README.md                     ← This file
-├── LICENSE                       ← MIT license
-├── .gitignore
-│
-├── utmf_v5.1.py                  ← Original UTMF v5.1 cell as a single Python module
-│                                   (one-shot pipeline; can be split into modules by users)
-│
-├── UTMF_FULL_DETAILS.json        ← Full UTMF v5.1 computational archive
-│                                   (code + data + spectra + settings)
-│
-├── notebooks/
-│   ├── utmf_nulltest.ipynb       ← Reconstruct TCI/MCI null-tests from JSON
-│   └── utmf_validation.ipynb     ← 13-test statistical validation suite
-│
-├── scripts/
-│   ├── run_nulltest.py           ← CLI wrapper around the null-test cell
-│   └── run_validation.py         ← CLI wrapper around the validation cell
-│
-├── examples/
-│   ├── UTMF_VALIDATION_summary.png      ← Example multi-panel validation figure
-│   ├── UTMF_VALIDATION_metrics.csv      ← Example scalar metrics table
-│   └── sample_plots/                    ← Additional example plots (optional)
-│
-└── datasets/
-    └── DATASET_LINKS.md          ← Direct links and references to external data sources
-````
 
 > **Note:** Only `UTMF_FULL_DETAILS.json` is required to reproduce all figures and statistics from the paper.
 > The original `utmf_v5.1.py` is included as a **single cell pipeline** for transparency; users are free to refactor it into modules.
