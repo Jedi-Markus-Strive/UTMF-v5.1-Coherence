@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "UTMF v5.1: Cross-Domain Multifractal Coherence Framework"
+version: "5.1"
+date-released: 2025-12-13
+authors:
+  - family-names: Strive
+    given-names: Jedi Markus
+    email: crisplatform@gmail.com
+    affiliation: Independent Researcher
+repository-code: "https://github.com/Jedi-Markus-Strive/UTMF-v5.1-Coherence"
+license: MIT
+keywords:
+  - multifractals
+  - coherence
+  - time series analysis
+  - MFDFA
+  - reproducible research
+  - cross-domain analysis
+abstract: >
+  UTMF v5.1 is a fully reproducible framework for quantifying cross-domain
+  multifractal coherence in physical measurement data. The release includes
+  the complete UTMF pipeline, a self-contained computational archive embedding
+  code, configuration, spectra, and validation results, as well as statistical
+  null tests comparing real datasets to synthetic noise ensembles.
