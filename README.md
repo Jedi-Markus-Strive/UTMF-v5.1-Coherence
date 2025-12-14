@@ -7,8 +7,8 @@
 This repository contains the complete, self-contained reproducible package used in:
 
 > **M. Eversdijk (2025).**  
-> *Cross-Domain Multifractal Coherence in Physical Measurements:  
-> A Fully Reproducible Test Using UTMF v5.1.*  
+> *Multifractal Coherence in Physical Measurements:  
+> A Fully Reproducible Cross-Domain Analysis Using UTMF v5.1.*  
 > DOI: https://doi.org/10.5281/zenodo.17927721
 
 The aim of this release is to provide a **transparent, inspectable computational archive** of the UTMF v5.1 multifractal coherence analysis across gravitational-wave interferometry, CMB maps, large-scale structure surveys, atomic spectra, collider data, pulsar timing residuals, quantum random number generators, and astrometric catalogues.
